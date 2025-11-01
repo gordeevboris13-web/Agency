@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Portfolio</title>
+<style>
+    body {
+        background: #fff;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 40px;
+        text-align: center;
+    }
+
+    .logo {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 60px;
+    }
+
+    /* Горизонтальные видео сетка */
+    .video-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 1400px;
+        margin: 0 auto 120px auto;
+        gap: 60px 80px;
+    }
+
+    /* Вертикальные видео сетка */
+    .video-grid-vertical {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* последние 2 вертикальных по центру */
+    .video-grid-vertical div:nth-last-child(-n+2) {
+        grid-column: span 1;
+        justify-self: center;
+    }
+
+    video {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+        display: block;
+        background: #000;
+    }
+
+    .vertical video {
+        aspect-ratio: 9/16;
+    }
+
+    .horizontal video {
+        aspect-ratio: 16/9;
+    }
+
+    .caption {
+        margin-top: 12px;
+        font-size: 20px;
+        color: #222;
+    }
+</style>
+</head>
+<body>
+
+<img src="logo.png" class="logo">
+<div class="subtitle">Kolodii Agency</div>
+
+<div class="video-grid">
+    <div class="horizontal"><video src="h1.mp4" controls></video><div class="caption">Project 1</div></div>
+    <div class="horizontal"><video src="h2.mp4" controls></video><div class="caption">Project 2</div></div>
+    <div class="horizontal"><video src="h3.mp4" controls></video><div class="caption">Project 3</div></div>
+    <div class="horizontal"><video src="h4.mp4" controls></video><div class="caption">Project 4</div></div>
+    <div class="horizontal"><video src="h5.mp4" controls></video><div class="caption">Project 5</div></div>
+    <div class="horizontal"><video src="h6.mp4" controls></video><div class="caption">Project 6</div></div>
+</div>
+
+<div class="video-grid-vertical">
+    <div class="vertical"><video src="v1.mp4" controls></video><div class="caption">Project 7</div></div>
+    <div class="vertical"><video src="v2.mp4" controls></video><div class="caption">Project 8</div></div>
+    <div class="vertical"><video src="v3.mp4" controls></video><div class="caption">Project 9</div></div>
+    <div class="vertical"><video src="v4.mp4" controls></video><div class="caption">Project 10</div></div>
+    <div class="vertical"><video src="v5.mp4" controls></video><div class="caption">Project 11</div></div>
+</div>
+
+</body>
+</html>
